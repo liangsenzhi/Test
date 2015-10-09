@@ -1,0 +1,166 @@
+C:\Users\senzhi>cd D:\react
+
+C:\Users\senzhi>d:
+
+D:\react>mkdir reactQa && cd reactQa
+
+D:\react\reactQa>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (reactQa)
+Sorry, name can no longer contain capital letters.
+name: (reactQa) react
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to D:\react\reactQa\package.json:
+
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+Is this ok? (yes)
+
+D:\react\reactQa>npm install react --save
+npm WARN package.json react@1.0.0 No description
+npm WARN package.json react@1.0.0 No repository field.
+npm WARN package.json react@1.0.0 No README data
+npm WARN install Refusing to install react as a dependency of itself
+
+D:\react\reactQa>npm install -g gulp
+C:\Users\senzhi\AppData\Roaming\npm\gulp -> C:\Users\senzhi\AppData\Roaming\npm\
+node_modules\gulp\bin\gulp.js
+gulp@3.9.0 C:\Users\senzhi\AppData\Roaming\npm\node_modules\gulp
+©À©¤©¤ pretty-hrtime@1.0.0
+©À©¤©¤ interpret@0.6.4
+©À©¤©¤ deprecated@0.0.1
+©À©¤©¤ archy@1.0.0
+©À©¤©¤ minimist@1.1.1
+©À©¤©¤ semver@4.3.6
+©À©¤©¤ tildify@1.1.0 (os-homedir@1.0.0)
+©À©¤©¤ v8flags@2.0.9 (user-home@1.1.1)
+©À©¤©¤ chalk@1.1.0 (escape-string-regexp@1.0.3, ansi-styles@2.1.0, supports-colo
+r@2.0.0, has-ansi@2.0.0, strip-ansi@3.0.0)
+©À©¤©¤ orchestrator@0.3.7 (stream-consume@0.1.0, sequencify@0.0.7, end-of-stream
+@0.1.5)
+©À©¤©¤ liftoff@2.1.0 (rechoir@0.6.1, extend@2.0.1, flagged-respawn@0.3.1, resolv
+e@1.1.6, findup-sync@0.2.1)
+©À©¤©¤ gulp-util@3.0.6 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpol
+ate@3.0.0, lodash._reevaluate@3.0.0, lodash._reescape@3.0.0, beeper@1.1.0, objec
+t-assign@3.0.0, replace-ext@0.0.1, vinyl@0.5.0, through2@2.0.0, multipipe@0.1.2,
+ lodash.template@3.6.2, dateformat@1.0.11)
+©¸©¤©¤ vinyl-fs@0.3.13 (graceful-fs@3.0.8, defaults@1.0.2, mkdirp@0.5.1, vinyl@0
+.4.6, through2@0.6.5, strip-bom@1.0.0, glob-watcher@0.0.6, glob-stream@3.1.18)
+
+
+D:\react\reactQa>npm install --save-dev gulp gulp-browserify gulp-concat gulp-re
+act gulp-connect lodash reactify
+npm WARN package.json react@1.0.0 No description
+npm WARN package.json react@1.0.0 No repository field.
+npm WARN package.json react@1.0.0 No README data
+lodash@3.10.0 node_modules\lodash
+
+gulp-concat@2.6.0 node_modules\gulp-concat
+©À©¤©¤ through2@0.6.5 (xtend@4.0.0, readable-stream@1.0.33)
+©À©¤©¤ gulp-util@3.0.6 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reescape@3
+.0.0, lodash._reinterpolate@3.0.0, lodash._reevaluate@3.0.0, beeper@1.1.0, objec
+t-assign@3.0.0, replace-ext@0.0.1, minimist@1.1.1, chalk@1.1.0, vinyl@0.5.0, lod
+ash.template@3.6.2, multipipe@0.1.2, through2@2.0.0, dateformat@1.0.11)
+©¸©¤©¤ concat-with-sourcemaps@1.0.2 (source-map@0.4.4)
+
+gulp@3.9.0 node_modules\gulp
+©À©¤©¤ pretty-hrtime@1.0.0
+©À©¤©¤ interpret@0.6.4
+©À©¤©¤ deprecated@0.0.1
+©À©¤©¤ archy@1.0.0
+©À©¤©¤ minimist@1.1.1
+©À©¤©¤ semver@4.3.6
+©À©¤©¤ tildify@1.1.0 (os-homedir@1.0.0)
+©À©¤©¤ v8flags@2.0.9 (user-home@1.1.1)
+©À©¤©¤ chalk@1.1.0 (escape-string-regexp@1.0.3, supports-color@2.0.0, ansi-style
+s@2.1.0, strip-ansi@3.0.0, has-ansi@2.0.0)
+©À©¤©¤ orchestrator@0.3.7 (sequencify@0.0.7, stream-consume@0.1.0, end-of-stream
+@0.1.5)
+©À©¤©¤ liftoff@2.1.0 (extend@2.0.1, rechoir@0.6.1, flagged-respawn@0.3.1, resolv
+e@1.1.6, findup-sync@0.2.1)
+©À©¤©¤ gulp-util@3.0.6 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reevaluate
+@3.0.0, lodash._reinterpolate@3.0.0, lodash._reescape@3.0.0, beeper@1.1.0, objec
+t-assign@3.0.0, replace-ext@0.0.1, vinyl@0.5.0, lodash.template@3.6.2, multipipe
+@0.1.2, through2@2.0.0, dateformat@1.0.11)
+©¸©¤©¤ vinyl-fs@0.3.13 (graceful-fs@3.0.8, vinyl@0.4.6, defaults@1.0.2, strip-bo
+m@1.0.0, mkdirp@0.5.1, through2@0.6.5, glob-stream@3.1.18, glob-watcher@0.0.6)
+
+gulp-react@3.0.1 node_modules\gulp-react
+©À©¤©¤ object-assign@2.1.1
+©À©¤©¤ through2@0.6.5 (xtend@4.0.0, readable-stream@1.0.33)
+©À©¤©¤ vinyl-sourcemaps-apply@0.1.4 (source-map@0.1.43)
+©À©¤©¤ gulp-util@3.0.6 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reescape@3
+.0.0, lodash._reinterpolate@3.0.0, beeper@1.1.0, object-assign@3.0.0, lodash._re
+evaluate@3.0.0, replace-ext@0.0.1, minimist@1.1.1, chalk@1.1.0, vinyl@0.5.0, thr
+ough2@2.0.0, lodash.template@3.6.2, multipipe@0.1.2, dateformat@1.0.11)
+©¸©¤©¤ react-tools@0.13.3 (jstransform@10.1.0, commoner@0.10.3)
+
+reactify@1.1.1 node_modules\reactify
+©À©¤©¤ through@2.3.8
+©¸©¤©¤ react-tools@0.13.3 (jstransform@10.1.0, commoner@0.10.3)
+
+gulp-browserify@0.5.1 node_modules\gulp-browserify
+©À©¤©¤ readable-stream@1.1.13 (isarray@0.0.1, inherits@2.0.1, string_decoder@0.1
+0.31, core-util-is@1.0.1)
+©À©¤©¤ browserify-shim@2.0.10 (through@2.3.8)
+©À©¤©¤ through2@0.4.2 (readable-stream@1.0.33, xtend@2.1.2)
+©À©¤©¤ gulp-util@2.2.20 (lodash._reinterpolate@2.4.1, minimist@0.2.0, vinyl@0.2.
+3, multipipe@0.1.2, chalk@0.5.1, lodash.template@2.4.1, through2@0.5.1, dateform
+at@1.0.11)
+©¸©¤©¤ browserify@3.46.1 (https-browserify@0.0.0, tty-browserify@0.0.0, builtins
+@0.0.7, constants-browserify@0.0.1, path-browserify@0.0.0, os-browserify@0.1.2,
+inherits@2.0.1, commondir@0.0.1, process@0.7.0, stream-combiner@0.0.4, duplexer@
+0.1.1, shell-quote@0.0.1, domain-browser@1.1.4, defined@0.0.0, xtend@3.0.0, deep
+-equal@0.1.2, shallow-copy@0.0.1, console-browserify@1.0.3, assert@1.1.2, querys
+tring-es3@0.2.0, punycode@1.2.4, string_decoder@0.0.1, util@0.10.3, events@1.0.2
+, resolve@0.6.3, browser-resolve@1.2.4, subarg@0.0.1, vm-browserify@0.0.4, conca
+t-stream@1.4.10, timers-browserify@1.0.3, stream-browserify@0.1.3, glob@3.2.11,
+url@0.10.3, syntax-error@1.1.4, parents@0.0.3, browserify-zlib@0.1.4, crypto-bro
+wserify@1.0.9, http-browserify@1.3.2, JSONStream@0.7.4, buffer@2.1.13, insert-mo
+dule-globals@6.0.0, umd@2.0.0, derequire@0.8.0, module-deps@2.0.6, deps-sort@0.1
+.2, browser-pack@2.0.1)
+
+gulp-connect@2.2.0 node_modules\gulp-connect
+©À©¤©¤ connect-livereload@0.3.2
+©À©¤©¤ event-stream@3.1.7 (duplexer@0.1.1, from@0.1.3, stream-combiner@0.0.4, pa
+use-stream@0.0.11, map-stream@0.1.0, through@2.3.8, split@0.2.10)
+©À©¤©¤ tiny-lr@0.0.7 (debug@0.8.1, faye-websocket@0.4.4, qs@0.5.6, noptify@0.0.3
+)
+©À©¤©¤ gulp-util@2.2.20 (lodash._reinterpolate@2.4.1, minimist@0.2.0, through2@0
+.5.1, dateformat@1.0.11, chalk@0.5.1, multipipe@0.1.2, vinyl@0.2.3, lodash.templ
+ate@2.4.1)
+©¸©¤©¤ connect@2.17.3 (cookie@0.1.2, parseurl@1.0.1, response-time@1.0.0, connec
+t-timeout@1.1.0, pause@0.0.1, cookie-signature@1.0.3, debug@0.8.1, vhost@1.0.0,
+fresh@0.2.2, qs@0.6.6, basic-auth-connect@1.0.0, on-headers@0.0.0, bytes@1.0.0,
+serve-favicon@2.0.0, morgan@1.1.1, errorhandler@1.0.1, cookie-parser@1.1.0, meth
+od-override@1.0.2, type-is@1.2.0, body-parser@1.2.2, serve-index@1.0.3, compress
+ion@1.0.2, multiparty@2.2.0, express-session@1.2.1, csurf@1.2.0, serve-static@1.
+1.0)
+
+D:\react\reactQa>
