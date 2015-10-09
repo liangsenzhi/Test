@@ -1,6 +1,6 @@
 <?php
 /**
- * Front to the WordPress applicati
+ * Front t
  *
  * @package WordPress
  */
