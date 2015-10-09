@@ -1,6 +1,5 @@
 <?php
 /**
- * Front t
  *
  * @package WordPress
  */
