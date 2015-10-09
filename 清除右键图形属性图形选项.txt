@@ -1,0 +1,20 @@
+﻿去掉Intel集成显卡的桌面右键菜单：
+方法一：
+    删除：运行中输入：regsvr32 /u igfxpph.dll
+    恢复：运行中输入：regsvr32 igfxpph.dll
+
+方法二：
+    运行中输入：regedit
+    确认运行注册表编辑器，依次单击展开
+   HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers搜索键
+    值，删除其中的 igfxcui 键，然后重新启动系统或者注销即可删除桌面菜单上的那三个选项。
+
+nvidia显卡去除方法：
+运行中输入：regsvr32 /u nvcpl.dll 
+再到桌面点右键试试，该显卡右键菜单没了。
+如果想恢复，只需运行中输入：regsvr32 nvcpl.dll 即可。
+
+Intel845集成显卡去除方法：
+运行中输入：regsvr32 /u igfxsrvc.dll
+
+注册下IE组件 开始 运行 输入regsvr32 jscript.dll 确定 再输入regsvr32 vbscript.dll 确定
