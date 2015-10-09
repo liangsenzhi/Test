@@ -1,0 +1,27 @@
+<html>
+<body>
+<div id=time></div><br />
+
+本空间由<a href="#">jsp控件网</a>提供
+<script>
+function show() 
+{ 
+now=new Date(); 
+year=now.getFullYear();
+month=now.getMonth()+1; 
+date=now.getDate(); 
+hours=now.getHours(); 
+minutes=now.getMinutes(); 
+seconds=now.getSeconds();     
+if(minutes<=9) 
+minutes="0"+minutes 
+if(seconds<=9) 
+seconds="0"+seconds
+time.innerHTML="当前时间："+year+"年"+month+"月"+date+"日"+hours+":"+minutes+":"+seconds;
+
+setTimeout("show()",1000); 
+}
+show();
+</script> 
+</body>
+</html>
