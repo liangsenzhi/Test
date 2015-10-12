@@ -1,0 +1,150 @@
+表达式?值1:值2
+
+sex==0?"男":"女"
+
+.............................................................
+if(条件1)
+{
+   //
+}
+else if(条件2)
+{
+  //
+}
+else if(条件3)
+{
+  //
+}
+else
+{
+  //
+}
+
+......................................................
+if(..)
+{
+
+}
+
+if()
+{
+
+}
+else
+{
+
+}
+..............................................................
+int month=int.Parse(Console.ReadLine());
+switch(month)
+{
+   case 1:
+   case 3:
+   case 5:
+   case 7:
+   case 8:
+   case 10:
+   case 12:
+       Console.WriteLine(month+"月有31天");
+       break;
+   case 4:
+   case 6:
+   case 9:
+   case 11:
+       Console.WriteLine(month+"月有30天");
+       break;
+   defalut:
+       Console.WriteLine(month+"月有28天");
+       break;
+}
+
+------------------------------
+while:先判断(入口条件)，再执行
+while(1==1)
+{
+    循环操作
+    if(条件)
+    {
+	break;
+    }
+}
+循环操作执行的次数范围：0-N次
+
+do...while：先执行，再判断
+do
+{
+   循环操作
+}while(条件);
+循环操作执行的次数范围：1-N次
+
+for：先判断，再执行
+for(int i=10;i<9;i++)
+{
+   循环操作
+}
+循环操作执行的次数范围：0-N次
+
+int[] nums={1,2,3,4};
+foreach(int i in nums)
+{
+   Console.WriteLine(i);
+}
+
+-----------------
+数据类型[] 数组名=new 数据类型[长度];
+数据类型[]  数组名={值1,值2};
+数据类型[] 数组名=new 数据类型[2]{值1,值2};
+
+class Student
+{
+   public int age;
+   public string name;
+}
+
+----------------
+数据类型:值类型和引用类型
+值类型:int,char,double,float,枚举，结构
+引用类型:string,数组,接口,类
+--------------
+Student[] stu=new Student[5];
+
+Student stu1=new Student();
+
+....
+
+stu[0]=stu1;
+
+
+变量：局部变量，全局变量
+
+全局变量有默认值
+局部变量没有默认值
+
+
+----------
+集合:ArrayList,HashTable    ,List<>,Dictionary<k,v>
+
+传统集合:ArrayList,HashTable
+ArrayList list=new ArrayList();  //object
+list.Add(1);  //0
+list.Add("1");  //1
+list.Add(1.2);   //2
+
+list.Remove(1); //删除索引为1的元素
+string s=list[1].ToString();
+
+泛型集合
+List<string> list=new List<string>();
+list.Add("1");
+
+
+string s=list[0];
+
+线性存储,自动分配索引,索引从0开始
+
+HashTable,Dictionary<k,v>
+键值对存储
+Dictionary<string,string> d=new Dictionary<string,string>();
+d.Add("001","zs");
+
+string s=d["001"];
