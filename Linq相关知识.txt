@@ -1,0 +1,258 @@
+本章目标：
+1、什么是Linq :语言集成查询
+2、为什么要用Linq
+   减少代码冗余、减少错误几率
+
+3、Linq技术的三大组件
+   Linq to objets 、 Linq to ADO.NET 、 Linq to XML
+
+4、演示实例--Linq To SQL实现增，删，改，查
+
+5、.net版本及开发工具和语言
+
+6、C#语言新特性
+   1)自动属性
+    public int Id{get;set;}
+
+   2)可空类型
+    int? num=null;    
+
+   3)泛型
+     class MyClass<T>
+     {
+	public T Res{get;set;}
+	public void GetRes(T a)
+	{
+
+	}
+     }     
+
+   4)对象和集合初始化器
+     Student stu=new Student{Id=1,Name="张三"};
+     List<Student> list=new List<Student>
+     {
+	new Student{Id=2,Name="李四"}
+     };
+
+   5)匿名类型
+     var obj=new{Id1=2,Name1="王五"};
+
+   6)扩展方法
+     a、定义在静态类中
+     b、是一个静态方法
+     c、参数列表中参数类型前带一个this关键字，代表为该类型的变量增加的方法
+
+   7)委托和匿名方法
+    delegate void MyDel();
+    
+    public void BuyWater()
+    {
+	Console.WriteLine("买一瓶水！");
+    }
+     
+    
+    MyDel del=new MyDel(BuyWater);
+    del();
+
+   8)简单的Lamdba表达式
+
+------------------------------------------------
+Ado.net分为两大主要组件：
+1).net框架数据提供程序[与数据源有关]
+  Connection
+  Command
+  DataReader
+  DataAdapter
+
+2)数据集[与数据源无关]
+  DataSet
+
+---------------------------------------------------
+asp.net
+
+---------------------------------------------------
+ArrayList list=new ArrayList();
+list.Add("aaa");
+list.Add("bbb");
+list.Add("asp3");
+list.Add("asp4");
+for(int i=0;i<list.Count;i++)
+{
+   Console.WriteLine(list[i]);
+}
+
+foreach(object o in list)
+{
+   string str=o.ToString();
+   Console.WriteLine(str);
+}
+
+
+var query=from n in list
+	  where n.indexOf("asp")>-1
+	  select n;
+
+
+
+======================================
+本章目标：
+1、Linq表达式常见关键字
+   1)from
+   2)where
+   3)select
+   4)group
+   5)into
+   6)orderby
+   7)join
+
+----------------------------------------------
+Linq to Objects :数据源是集合或数组
+
+var res=from 变量名 in 数据源
+        [where 条件]
+        [orderby 变量名]
+        select 变量名;
+
+---------------------------------------------
+class Student
+{
+   public int Age{get;set;}
+   public string Name{get;set;}
+}
+
+class TestStudent
+{
+  static void Main()
+  {
+	 
+
+  }
+}
+
+
+----------------------------------------------------------
+分组
+1    zs     男     20
+2    ls     女     20
+3    ww     女     30
+4    zl     女     30
+5    zw     男     30
+6    aa    未知    25
+
+--按照性别进行分组
+男    2
+女    3
+未知  1
+
+--按照年龄进行分组
+20    2
+30    3
+25    1
+
+--按照姓进行分组
+z    3
+l    1
+w    1
+a    1
+
+-------------------------------------
+GuestInfo
+gName gAge gTel
+zs     30   13244445555
+ls     25    13344445555 
+
+
+GuestTitle
+gName   gTitle
+zs       .net程序员
+ls       java程序员
+
+------------------------------------
+select g.gName,gTel,gTitle
+from GuestInfo g inner join GuestTitle t
+on g.gName=t.gName
+
+
+--------------------------------------------
+List<ClassInfo> clsList=new List<ClassInfo>
+{
+    new ClassInfo{clsId=1,clsName="T1201"},
+    new ClassInfo{clsId=2,clsName="T1202"}
+};
+
+List<StudentInfo> stuList=new List<StudentInfo>
+{
+    new StudentInfo{stuName="张三",clsId=1},
+    new StudentInfo{stuName="李四",clsId=2}
+};
+
+var query=from cls in clsList
+          join stu in stuList
+          on cls.clsId equals stu.clsId
+          select new{sName=stu.stuName,cName=cls.clsName};
+
+foreach(var obj in query)
+{
+    Console.WriteLine(obj.sName+"\t"+obj.cName);
+}
+
+
+==
+List<studentInfo> list=new List<studentInfo>
+{
+    new studentInfo{stuId=1,stuName="张三"},
+    new studentInfo{stuId=2,stuName="李四"},
+    new studentInfo{stuId=3,stuName="张五"}
+};
+
+//Linq表示式实现查询姓张的学生信息
+var qurey=from stu in list
+	  where stu.stuName.SubString(0,1)=="张"
+	  select stu;
+
+
+
+var query2=list.Where(stu=>stu.stuName.SubString(0,1)=="张");
+
+StuDBDataContext db=new StuDBDataContext();
+var res=db.StudentInfo.Where(stu=>stu.stuName.SubString(0,1)=="张");
+
+
+
+create proc proc_GetStudent
+@pageIndex int,  --第几页
+@pageSize int,    --每页显示多少条
+@where varchar(500)
+as
+declare @sql varchar(2000)
+set @sql='select top '+pageSize+' stuId,stuName from StudentInfo 
+where stuId not in(select top '+(@pageIndex-1)*@pageSize+' stuId from studentInfo)'
+exec (@sql)
+go
+
+
+--2
+Skip():从多少条开始取
+Take():取多少条  pageSize
+where stuId not in(select top 5 stuId from studentInfo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
